@@ -1,0 +1,88 @@
+# Copyright (C) 2020 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: raport 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
+"POT-Creation-Date: 2020-04-17T21:03:15+00:00\n"
+"PO-Revision-Date: 2023-07-06 00:51+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: bs_BA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.1\n"
+"X-Domain: raport\n"
+
+# header.php
+msgid "Homepage"
+msgstr "Početna"
+
+msgid "Navigation"
+msgstr "Navigacija"
+
+msgid "Change Theme"
+msgstr "Promjeni temu"
+
+msgid "Open/Close Search"
+msgstr "Otvori/zatvori pretragu"
+
+msgid "Open/Close Menu"
+msgstr "Otvori/zatvori navigaciju"
+
+msgid "Enter search term…"
+msgstr "Unesite pojam pretrage…"
+
+msgid "No results!"
+msgstr "Bez rezultata!"
+
+msgid "Page doesn't exist, or it was removed."
+msgstr "Stranica ne postoji ili je uklonjena."
+
+# footer.php
+msgid "&copy; %s | All Rights Reserved"
+msgstr "&copy; %s | Sva prava zadržana"
+
+# functions.php
+msgid "Header Menu"
+msgstr "Navigacija zaglavlja"
+
+msgid "Footer Menu"
+msgstr "Navigacija podnožja"
+
+# page/search.php
+msgid "Results for: %s"
+msgstr "Rezultati za: %s"
+
+# sidebar/intro.php
+msgid "Popular"
+msgstr "Najčitanije"
+
+msgid "Latest"
+msgstr "Najnovije"
+
+msgid "More News"
+msgstr "Još vijesti"
+
+# section/related.php
+msgid "Related Articles"
+msgstr "Slične vijesti"
+
+# shared/random.php
+msgid "You might be interested"
+msgstr "Možda vas zanima"
+
+# section-archive-cat.php
+msgid "Tag:"
+msgstr "Oznaka:"
+
+# inc/template-tags.php
+msgid "Tags:"
+msgstr "Oznake:"
+
+msgid "Posted in %1$s"
+msgstr "Objavljeno pod %1$s"
+
+msgid "Author: %1$s"
+msgstr "Autor: %1$s"

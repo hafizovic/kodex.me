@@ -1,0 +1,77 @@
+body {
+  background: #fff !important;
+}
+
+.zox-author-name,
+.zox-author-name-wrap,
+.zox-post-date-wrap {
+  float: none;
+
+  p {
+    float: none;
+  }
+}
+
+.zox-author-info-wrap {
+  @media (max-width: 599px) {
+    text-align: center;
+  }
+}
+
+.zox-author-name-wrap {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.zox-dark {
+  .page-numbers {
+    &:not(.current) {
+      background-color: #000;
+      border-color: #000;
+    }
+  }
+}
+
+.zox-art-img {
+  img {
+    width: 100%;
+  }
+}
+
+// Logo manipulation
+.zox-bot-head-logo img,
+.zox-bot-head-logo-main img {
+  max-height: 50px;
+  width: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .zox-bot-head-logo img {
+    top: 0;
+  }
+}
+
+.intro-option2 {
+  @media (min-width: 768px) {
+    grid-template-areas: "feat-main feat-left";
+    grid-template-columns: auto 265px;
+  }
+
+  @media (max-width: 1023px) and (min-width: 900px) {
+    grid-template-columns: auto 220px;
+  }
+}
+
+.intro-option3 {
+  @media (min-width: 768px) {
+    grid-template-areas: "feat-main feat-left";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.intro-option4 {
+  @media (min-width: 768px) {
+    grid-template-areas: "feat-main";
+    grid-template-columns: 1fr;
+  }
+}

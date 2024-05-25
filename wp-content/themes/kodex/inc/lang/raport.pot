@@ -1,0 +1,85 @@
+# Copyright (C) 2020 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/_s\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-04-17T21:03:15+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: _s\n"
+
+# header.php
+msgid "Homepage"
+msgstr ""
+
+msgid "Navigation"
+msgstr ""
+
+msgid "Change Theme"
+msgstr ""
+
+msgid "Open/Close Search"
+msgstr ""
+
+msgid "Open/Close Menu"
+msgstr ""
+
+msgid "Enter search term…"
+msgstr ""
+
+# footer.php
+msgid "&copy; %s | All Rights Reserved"
+msgstr ""
+
+# 404.php
+msgid "No results!"
+msgstr ""
+
+msgid "Page doesn\'t exist, or it was removed."
+msgstr ""
+
+# functions.php
+msgid "Header Menu"
+msgstr ""
+
+msgid "Footer Menu"
+msgstr ""
+
+# page/search.php
+msgid "Results for: %s"
+msgstr ""
+
+# sidebar/intro.php
+msgid "Popular"
+msgstr ""
+
+msgid "Latest"
+msgstr ""
+
+msgid "More News"
+msgstr ""
+
+# section/related.php
+msgid "Related Articles"
+msgstr ""
+
+# shared/random.php
+msgid "You might be interested"
+msgstr ""
+
+# section-archive-cat.php
+msgid "Tag:"
+msgstr ""
+
+# inc/template-tags.php
+msgid "Tags:"
+msgstr ""
+
+msgid "Posted in %1$s"
+msgstr ""
