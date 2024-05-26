@@ -40,7 +40,7 @@ function ja_remove_customizer_options( $wp_customize ) {
     $wp_customize->remove_panel( 'themes'              ); // Change theme
     $wp_customize->remove_section( 'static_front_page' ); // Homepage Settings
     $wp_customize->remove_section( 'title_tagline'     ); // Site Identity
-    //$wp_customize->remove_section( 'custom_css'        ); // Additional CSS
+    $wp_customize->remove_section( 'custom_css'        ); // Additional CSS
 }
 add_action( 'customize_register', 'ja_remove_customizer_options', 10 );
 
