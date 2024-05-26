@@ -11,7 +11,7 @@
             'order'            => 'DESC',
             'date_query' => array(
                 array(
-                    'after' => '24 hours ago'
+                    'after' => '1 week ago'
                 )
             )
         );

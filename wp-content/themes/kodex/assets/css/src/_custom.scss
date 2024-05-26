@@ -1,7 +1,6 @@
-body {
-  background: #fff !important;
-}
+body {background: #fff !important;}
 
+// Author and post date inside post
 .zox-author-name,
 .zox-author-name-wrap,
 .zox-post-date-wrap {
@@ -23,6 +22,7 @@ body {
   margin-bottom: 8px;
 }
 
+// Fix background of page navigation on dark mode
 .zox-dark {
   .page-numbers {
     &:not(.current) {
@@ -32,6 +32,7 @@ body {
   }
 }
 
+// Fix image width on all thumbnails
 .zox-art-img {
   img {
     width: 100%;
@@ -39,10 +40,14 @@ body {
 }
 
 // Logo manipulation
-.zox-bot-head-logo img,
-.zox-bot-head-logo-main img {
+.zox-bot-head-logo svg,
+.zox-bot-head-logo-main svg {
   max-height: 50px;
   width: auto;
+
+  @media (max-width: 599px) {
+    max-height: 34px;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -51,6 +56,35 @@ body {
   }
 }
 
+// Change space for logo on really small screens
+@media screen and (max-width: 479px) {
+  #zox-bot-head {
+    grid-template-columns: auto 1fr auto;
+  }
+}
+
+// Give some space for logo on desktop
+.zox-bot-head-logo-main {
+  @media (min-width: 1024px) {
+    margin-right: 15px;
+  }
+}
+
+// Remove left padding for logo inside drawer
+#zox-fly-logo {
+   padding: 0;
+
+  a {
+    width: 211px;
+  }
+ }
+
+// Change font size for desktop menu, cause some of them font fit on certain resolutions
+.zox-nav-menu ul li a {
+  font-size: 20px;
+}
+
+// Custom layouts on frontpage
 .intro-option2 {
   @media (min-width: 768px) {
     grid-template-areas: "feat-main feat-left";
