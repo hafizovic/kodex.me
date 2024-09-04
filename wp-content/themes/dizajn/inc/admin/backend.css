@@ -1,0 +1,55 @@
+/* Hide options in toolbar */
+/* WP Logo & Help Button */
+#wp-admin-bar-wp-logo,
+#contextual-help-link-wrap {
+    display: none;
+}
+
+@media (max-width: 782px) {
+    #wp-admin-bar-wp-logo {
+        display: none !important;
+    }
+}
+
+#menu-comments {display: none; !important;}
+#menu-plugins {display: none; !important;}
+#menu-tools {display: none; !important;}
+#menu-appearance li:nth-child(2),
+#menu-appearance li:nth-child(3),
+#menu-appearance li:nth-child(6) {display: none;}
+
+/* Hide Footer */
+#wpfooter {display: none;}
+
+.custom-label {
+    font-weight: 600;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.custom-input,
+.custom-select,
+.custom-textarea {
+    width: 100%;
+    display: block;
+    border-radius: 0 !important;
+    box-sizing: border-box;
+}
+
+.custom-desc {
+    font-size: 11px;
+    line-height: 1.3;
+    color: #999;
+    display: block;
+    margin-top: 4px;
+}
+
+.column-post_views {
+    width: 60px;
+}
+
+@media (min-width: 783px) {
+    .column-post_views {
+        text-align: right;
+    }
+}

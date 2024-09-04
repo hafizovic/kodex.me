@@ -1,0 +1,82 @@
+:root {
+  --brand-light: 199, 81%, 46%;
+  --brand-dark: 225, 55%, 32%;
+
+  // Global
+  --font-size: 16px;
+  --line-height: 1.5;
+
+  // for H1, H2,...
+  --headings-line-height: 1.15;
+  --headings-margin-bottom: 0.4em;
+
+  //--spacing: 16px;
+  --duration: 200ms;
+  --wrap: 1320px;
+
+  --clr-text: 0, 0%, 20%;
+  --clr-border: 0, 0%, 87%;
+  --clr-selection: #fff;
+  --bg-body: 29, 78%, 95%;
+  --bg-content: 0, 0%, 100%;
+
+  --facebook:  #3b5997;
+  --twitter:   #1da1f2;
+  --youtube:   #f00;
+  --instagram: #833ab4;
+  --viber:     #7e3caf;
+  --messenger: #0278ff;
+  --whatsapp:  #24d366;
+  --linkedin:  #0077b5;
+
+  --spacing: 0.75em
+;
+
+  @media (min-width: 769px) {
+    --spacing: 1em;
+  }
+}
+
+// Breakpoints
+$bp: (
+  xs: 333px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1600px
+);
+
+body {
+  &[data-scheme="dark"] {
+    [data-trigger="theme"] {
+      svg:not(.d-none) {display: none}
+      .d-none {display: block}
+    }
+  }
+
+  [data-scheme="dark"],
+  &[data-scheme="dark"] {
+    --clr-text: 0, 0%, 78%;
+    --clr-border: 0, 0%, 25%;
+    --bg-body: 0, 0%, 30%;
+    --bg-content: 0, 0%, 17%;
+
+    [data-scheme="dark"] {
+      --bg-content: 0, 0%, 0%;
+    }
+
+    .section-header .section-header-cat {
+      --brand: 0, 0%, 100%;
+    }
+  }
+
+  --brand: 358, 79%, 50%;
+}
+
+// Fonts
+$fonts: (
+  primary: #{"PT Sans", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif},
+  secondary: #{"PT Serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif}
+);

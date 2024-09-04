@@ -1,0 +1,43 @@
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6 {
+
+}
+
+.h1 {
+  line-height: 1.1;
+  font-size: 1.75em;
+  @include mq(lg, min) {font-size: 2.75em}
+  //@include clampIt(font-size, 28px, 44px, 'md', 'xl');
+}
+
+.h2 {
+  line-height: 1.1;
+  font-size: 1.75em;
+  @include mq(lg, min) {font-size: 2.25em}
+  //@include clampIt(font-size, 28px, 36px, 'md', 'xl');
+}
+
+.h3 {
+  line-height: 1.1;
+  font-size: 1.5em;
+  @include mq(lg, min) {font-size: 1.75em}
+  //@include clampIt(font-size, 24px, 28px, 'md', 'xl');
+}
+
+.h4 {
+  line-height: 1.1;
+  font-size: 1.375em;
+  @include mq(lg, min) {font-size: 1.5em}
+  //@include clampIt(font-size, 22px, 24px, 'md', 'xl');
+}
+
+.h5 {
+  line-height: 1.1;
+  font-size: 1.0625em;
+  @include mq(lg, min) {font-size: 1.25em}
+  //@include clampIt(font-size, 17px, 20px, 'md', 'xl');
+}

@@ -1,0 +1,25 @@
+{
+  "name": "frntd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx mix watch",
+    "prod": "npx mix --production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "laravel-mix": "^6.0.43",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0"
+  },
+  "dependencies": {
+    "photoswipe": "^5.3.8",
+    "swiffy-slider": "^1.6.0",
+    "vanilla-cookieconsent": "^3.0.0-rc.13"
+  }
+}

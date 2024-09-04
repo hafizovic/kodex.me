@@ -1,0 +1,64 @@
+@use "sass:math";
+
+// Fluid sizing (suports REM values)
+// Usage: @include clampIt(font-size, 320px, 1366px, 14px, 20px);
+// Usage: @include clampIt((padding-top, padding-bottom), 320px, 1366px, 14px, 20px);
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@mixin clampIt($properties, $minSize, $maxSize, $minScreen, $maxScreen) {
+  $isRem: unit($minSize) == 'rem';
+
+  $minSize: strip-unit(if($isRem, $minSize * 16, $minSize));
+  $maxSize: strip-unit(if($isRem, $maxSize * 16, $maxSize));
+
+  $minScreen: strip-unit($minScreen);
+  $maxScreen: strip-unit($maxScreen);
+
+  $difference: ($maxSize - $minSize) / ($maxScreen - $minScreen);
+  $constant: ($maxSize - $maxScreen * $difference) / 16;
+
+  @each $property in $properties {
+    #{$property}: clamp(#{($minSize / 16) + 'rem'}, #{$constant + 'rem'} + #{100 * $difference + 'vw'}, #{($maxSize / 16) + 'rem'});
+  }
+}
+
+// Media Queries
+// Usage: @include mq(xs, max || min, width || height) {}
+// Usage: @include mq(500px, max || min, width || height) {}
+@mixin mq($value, $type: max, $dir: width) {
+  @if map_has_key($bp, $value) {
+    $value: map_get($bp, $value);
+  } @else {
+    $value: $value;
+  }
+
+  @if $type == min {
+    $value: $value + 1;
+  }
+
+  @media (#{$type}-#{$dir}: $value) {
+    @content;
+  }
+}
+
+// Form placeholder color mixin
+// Usage: @include placeholder {color: #f60}
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content;}
+  &:-moz-placeholder           {@content;}
+  &::-moz-placeholder          {@content;}
+  &:-ms-input-placeholder      {@content;}
+}
+
+// Limiter
+@mixin contentLimit($width) {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $width;
+}

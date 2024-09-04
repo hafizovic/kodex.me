@@ -1,0 +1,204 @@
+.teasers {
+  &[data-layout] {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &[data-layout="intro"] {
+    @include mq(md, min) {
+      gap: var(--spacing);
+      padding: var(--spacing);
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .teaser {
+      display: grid;
+
+      @include mq(md, max) {
+        padding: var(--spacing);
+
+        &:not(:last-child) {
+          border-bottom: 1px solid hsla(var(--clr-border), 1);
+        }
+      }
+
+      &:first-child {
+        grid-template-columns: 1fr;
+
+        @include mq(md, min) {
+          grid-column: 1 / span 3;
+          //grid-template-columns: 1fr 2fr;
+          grid-template-rows: 1fr;
+          border-radius: 0.25em;
+          overflow: hidden;
+        }
+
+        .teaser-thumb {
+          aspect-ratio: 4/3;
+
+          @include mq(md, min) {
+            aspect-ratio: 2/0.9;
+            height: 100%;
+            //order: 2;
+          }
+        }
+
+        .teaser-content {
+          @include mq(md, min) {
+            padding: 0 var(--spacing) 0 0;
+          }
+        }
+
+        h3 {
+          font-size: 1.35em;
+        }
+      }
+
+      @include mq(md, min) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+      }
+    }
+
+    .teaser-thumb {
+      @include mq(md, min) {
+        aspect-ratio: 4/3;
+      }
+    }
+  }
+
+  &[data-layout="sidebar"] {
+    .teaser {
+      padding: calc(var(--spacing) / 2);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+
+      &:not(:last-child) {
+        border-bottom: 1px solid hsla(var(--clr-border), 1);
+      }
+
+      &:nth-child(n+5) {
+        @include mq(lg, max) {
+          display: none;
+        }
+      }
+    }
+
+    span, h3 {font-weight: 400;}
+    h3 {font-size: 0.9375em;}
+  }
+
+  &[data-layout="category"] {
+    gap: 0 var(--spacing);
+    grid-template-columns: 1fr;
+
+    @include mq(md, min) {
+      margin: var(--spacing);
+      gap: var(--spacing);
+      grid-template-columns: repeat(5, 1fr);
+
+      //.teaser {
+      //  &:nth-child(1) {grid-column: 1 / span 4;}
+      //  &:nth-child(2) {grid-column: 5 / span 4;}
+      //  &:nth-child(3) {grid-column: 9 / span 4;}
+      //  &:nth-child(4) {grid-column: 1 / span 3;}
+      //  &:nth-child(5) {grid-column: 4 / span 3;}
+      //  &:nth-child(6) {grid-column: 7 / span 3;}
+      //  &:nth-child(7) {grid-column: 10 / span 3;}
+      //}
+    }
+
+    .teaser {
+      grid-template-columns: 1fr;
+
+      @include mq(md, max) {
+        padding: var(--spacing);
+        border-bottom: 1px solid hsla(var(--clr-border), 1);
+      }
+
+      @include mq(md, min) {
+        grid-template-rows: auto 1fr;
+      }
+
+      &:first-child {
+        .teaser-thumb {
+          aspect-ratio: 4/3;
+        }
+      }
+
+      &:not(:first-child) {
+        @include mq(md, max) {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+        }
+
+        .teaser-thumb {
+          @include mq(md, min) {
+            aspect-ratio: 4/3;
+          }
+        }
+      }
+    }
+  }
+
+  &[data-layout="archive"] {
+    grid-template-columns: 1fr;
+
+    @include mq(md, min) {
+      gap: var(--spacing);
+      margin: var(--spacing);
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .teaser {
+      grid-template-columns: 1fr;
+
+      @include mq(md, max) {
+        padding: var(--spacing);
+
+        &:not(:last-child) {
+          border-bottom: 1px solid hsla(var(--clr-border), 1);
+        }
+      }
+
+      @include mq(md, min) {
+        grid-template-rows: auto 1fr;
+      }
+
+      &:first-child {
+        .teaser-thumb {
+          aspect-ratio: 4/3;
+        }
+      }
+
+      &:not(:first-child) {
+        @include mq(md, max) {
+          grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+        }
+
+        .teaser-thumb {
+          @include mq(md, min) {
+            aspect-ratio: 4/3;
+          }
+        }
+      }
+    }
+  }
+
+  &[data-layout="slider"] {
+    grid-template-columns: unset;
+
+    .teaser {
+      padding: var(--spacing) 0 var(--spacing) var(--spacing);
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+
+      &:last-child {
+        padding-right: var(--spacing);
+        width: calc(100% + var(--spacing));
+      }
+    }
+
+    .teaser-thumb {
+      aspect-ratio: 4/3;
+    }
+  }
+}

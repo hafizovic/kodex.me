@@ -1,0 +1,52 @@
+/*!
+Theme Name: Dizajn
+Theme URI: https://hafizovic.ba/
+Author: Mensur Hafizović
+Author URI: https://hafizovic.ba/
+Description: Official and custom made Theme
+Tags: blog, entertainment, news, grid-layout, two-columns, three-columns, right-sidebar, accessibility-ready, block-patterns, block-styles, custom-menu, featured-images, theme-options, translation-ready
+Version: 1.0
+Requires at least: 6.2.2
+Tested up to: 6.2.2
+Requires PHP: 7.4
+License: Dizajn
+License URI: https://hafizovic.ba
+Text Domain: dizajn
+*/
+
+// Vendors
+@import "../../node_modules/photoswipe/dist/photoswipe.css";
+@import "../../node_modules/swiffy-slider/dist/css/swiffy-slider.min.css";
+@import "../../node_modules/vanilla-cookieconsent/dist/cookieconsent.css";
+
+// Config
+@import 'config/fonts';
+@import 'config/variables';
+@import 'config/tools';
+
+// Base
+@import 'base/reset';
+@import 'base/helpers';
+
+// Components
+@import 'components/header';
+@import 'components/section';
+@import 'components/sidebar';
+@import 'components/article';
+@import 'components/teasers';
+@import 'components/sliders';
+@import 'components/layouts';
+//@import 'components/blocks';
+//@import 'components/forms';
+@import 'components/footer';
+@import 'components/shared';
+@import 'components/wp-defaults';
+
+body.cc--darkmode {
+  .header-logo {
+    img {
+      &.d-block {display: none;}
+      &.d-none {display: block;}
+    }
+  }
+}

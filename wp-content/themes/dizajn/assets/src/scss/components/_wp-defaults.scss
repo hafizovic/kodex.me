@@ -1,0 +1,100 @@
+.nav-links {
+  margin: var(--spacing) 0 calc(var(--spacing) * -2);
+  padding: var(--spacing);
+  gap: 0.25em;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  background: hsla(var(--brand), 0.05);
+  border-top: 1px solid hsla(var(--clr-border), 1);
+  border-radius: 0.25em;
+
+  a {
+    &.page-numbers {
+      &:hover {
+        text-decoration: none;
+        background: hsla(var(--brand), 0.1);
+        border-color: hsla(var(--brand), 0.1);
+      }
+    }
+  }
+
+  .page-numbers {
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+
+    &:not(.dots) {
+      min-width: 1.875em;
+      padding: 0.375em 0.625em;
+      color: hsla(var(--brand), 1);
+      border: 1px solid transparent;
+      border-radius: 0.25em;
+    }
+
+    &.prev,
+    &.next {
+      padding: 0.25em;
+      color: hsla(var(--brand), 1);
+      border-color: transparent;
+    }
+
+    &.current {
+      color: hsla(var(--clr-text), 1);
+      background: hsla(var(--brand), 0.1);
+      border-color: hsla(var(--brand), 0.1);
+    }
+  }
+}
+
+.nav-pages {
+  margin: var(--spacing) 0;
+  padding: var(--spacing);
+  gap: 0.25em;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  background: hsla(var(--bg-body), 0.5);
+  border: 1px solid hsla(var(--clr-border), 1);
+  border-radius: 0.25em;
+
+  a {
+    &.post-page-numbers {
+      &:hover {
+        text-decoration: none;
+        background: hsla(var(--brand), 0.1);
+        border-color: hsla(var(--brand), 0.1);
+      }
+    }
+  }
+
+  .post-page-numbers {
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+
+    &:not(.dots) {
+      min-width: 1.875em;
+      padding: 0.375em 0.625em;
+      color: hsla(var(--brand), 1);
+      border: 1px solid transparent;
+      border-radius: 0.25em;
+    }
+
+    &:not(.current) {
+      color: #fff;
+      background: hsla(var(--brand), 1);
+
+      &:hover {
+        background: hsla(var(--brand), 85);
+      }
+    }
+
+    &.current {
+      color: hsla(var(--clr-text), 1);
+      border-color: currentColor;
+    }
+  }
+}

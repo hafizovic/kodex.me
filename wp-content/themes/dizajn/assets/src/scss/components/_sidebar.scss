@@ -1,0 +1,77 @@
+.sidebar {
+  position: relative;
+  //display: grid;
+  //grid-template-rows: auto 1fr;
+
+  @include mq(lg, max) {
+    background: hsla(var(--bg-body), 0.35);
+    border-top: 1px solid hsla(var(--clr-border), 1);
+  }
+
+  &:not(.has-scrollbar) {
+    .sidebar-scroller {
+      @include mq(lg, min) {
+        position: sticky;
+        top: 60px;
+      }
+    }
+  }
+
+  &.has-scrollbar {
+    @include mq(lg, min) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 300px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .sidebar-scroller {
+      @include mq(lg, min) {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+    }
+  }
+
+  .code-block {
+    margin: 0 !important;
+  }
+}
+
+.tabs-triggers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 1px;
+  display: flex;
+  flex-flow: row nowrap;
+  background: hsla(var(--clr-border), 1);
+  border-bottom: 1px solid hsla(var(--clr-border), 1);
+
+  li {
+    font-size: 0.9375em;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.75em;
+    display: block;
+    flex: 1 1 50%;
+    background: hsla(var(--bg-body), 0.5);
+    cursor: default;
+
+    &:not(.is-active) {
+      cursor: pointer;
+    }
+
+    &.is-active {
+      background: hsla(var(--bg-content), 1);
+    }
+  }
+}
+
+.tabs-content {
+
+}
