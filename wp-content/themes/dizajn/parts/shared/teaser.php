@@ -16,12 +16,17 @@
                 <div class="teaser-custom-title">
                     <div class="teaser-custom-title-inner">
                         <?php the_title( '<h3>', '</h3>' ); ?>
-                        <div class="teaser-excerpt"> <?php echo get_the_excerpt() ?></div>
                     </div>
                 </div>
             <?php else: ?>
                 <?php the_title( '<h3>', '</h3>' ); ?>
+                <?php if($iteration == 1): ?>
+                    <div class="teaser-excerpt"><?php echo get_the_excerpt() ?></div>
+                <?php endif ?>
             <?php endif ?>
+
+
+
         </a>
         <time datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ) ?>"><?php echo esc_html( get_the_date() . ' - ' .  get_the_time() )  ?></time>
     </div>

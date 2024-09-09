@@ -17,7 +17,13 @@
   display: flex;
   flex-flow: row nowrap;
 
-  &:not(.footer-socials) {
+  &.header-socials {
+    a {
+      color: #999;
+    }
+  }
+
+  &:not(.header-socials):not(.footer-socials) {
     a {
       &.fb {color: var(--facebook);}
       &.tw {color: var(--twitter);}
@@ -100,8 +106,10 @@
   &[data-layout="intro"] {
     .teaser {
       &:first-child {
-        gap: 0;
-        padding: 0;
+        @include mq(md, max) {
+          gap: 0;
+          padding: 0;
+        }
 
         .teaser-thumb {
           @include mq(md, max) {
@@ -113,15 +121,6 @@
         .teaser-content {
           @include mq(md, max) {
             padding: var(--spacing);
-          }
-
-          @include mq(md, min) {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: calc(var(--spacing) / 2) var(--spacing);
-            background: rgba(#fff, 0.75);
           }
         }
 
@@ -158,6 +157,38 @@
     .view-counter {
       right: calc(var(--spacing) / 2);
       bottom: calc(var(--spacing) / 2);
+    }
+  }
+}
+
+.popular-triggers {
+  margin: var(--spacing);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid hsla(var(--brand), 1);
+  border-radius: 4px;
+  overflow: hidden;
+
+  & > * {
+    font-weight: 700;
+    text-align: center;
+    padding: 8px 16px;
+    color: #fff;
+    background: hsla(var(--brand), 1);
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+      background: hsla(var(--brand), 0.75);
+    }
+
+    &:first-child {
+      border-right: 1px solid hsla(var(--bg-content), 1);
+    }
+
+    &.is-active {
+      color: hsla(var(--brand), 1);
+      background: transparent;
     }
   }
 }

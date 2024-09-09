@@ -6,7 +6,21 @@
   @include mq(md, min) {--swiffy-slider-item-count: 4;}
   @include mq(lg, min) {--swiffy-slider-item-count: 5;}
   //@include mq(xl, min) {--swiffy-slider-item-count: 6;}
+}
 
+.slider-featags {
+  display: flex;
+  justify-content: center;
+  --swiffy-slider-item-count: auto;
+
+  .slider-container {
+    display: flex;
+
+    & > * {
+      width: auto;
+      white-space: nowrap;
+    }
+  }
 }
 
 .slider-nav {
@@ -20,6 +34,10 @@
   padding: 0.3125em;
   background: rgba(#fff, 0.25);
   justify-content: center;
+
+  @include mq(md, max) {
+    top: -0.6em;
+  }
 
   &:before,
   &:after {

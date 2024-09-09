@@ -20,7 +20,7 @@
   @include mq(lg, min) {
     &:not(.no-sidebar) {
       display: grid;
-      grid-template-columns: 1fr 18.75em;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 18.75em);
 
       .main {
         border-right: 1px solid hsla(var(--clr-border), 1);
@@ -40,13 +40,17 @@
 }
 
 .section-header {
-  padding: calc(var(--spacing) * 0.75) var(--spacing) 0;
+  padding: var(--spacing) var(--spacing) 0;
   //background: linear-gradient(to right, hsla(var(--brand), 0.65) 0%, hsla(var(--brand), 0.25) 100%);
   //border-bottom: 1px solid hsla(var(--brand), 0.25);
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
+
+  @include mq(md, max) {
+    padding-bottom: var(--spacing);
+  }
 
   .section-header-cat {
     position: relative;

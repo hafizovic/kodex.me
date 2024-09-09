@@ -1,0 +1,150 @@
+.comment-list {
+  margin: 0 0 calc(var(--spacing) * 2);
+  padding: 0;
+  list-style: none;
+
+  .comment {
+    padding: calc(var(--spacing));
+    border: 1px solid hsla(var(--clr-border), 1);
+
+    &:nth-child(odd) {background: hsla(var(--bg-body), 0.4);}
+    &:nth-child(even) {background: hsla(var(--bg-body), 0.2);}
+
+    & + .comment {
+      margin-top: -1px;
+    }
+  }
+}
+
+.comment-meta {
+  font-size: 15px;
+  margin-bottom: var(--spacing);
+  //background: hsla(var(--clr-border), 1);
+
+  .comment-author {
+    font-size: 18px;
+
+    span {
+      display: none;
+    }
+  }
+
+  .comment-metadata {
+    font-size: 14px;
+
+    a {
+      color: hsla(var(--clr-text), 0.5);
+    }
+  }
+}
+
+.cld-like-dislike-wrap {
+  font-size: 14px;
+  margin: 0 !important;
+  gap: 10px;
+  display: flex !important;
+  flex-flow: row nowrap;
+
+  .cld-common-wrap {
+    min-width: unset;
+  }
+
+  .cld-like-wrap,
+  .cld-dislike-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+
+    a {
+      width: auto;
+      height: 20px;
+      display: block;
+    }
+
+    span {
+      line-height: 20px;
+      display: block;
+    }
+  }
+
+  .cld-like-wrap {
+    a {
+      color: green;
+
+      &:before {
+        content: '\2191';
+      }
+    }
+
+  }
+
+  .cld-dislike-wrap {
+    a {
+      color: red;
+
+      &:before {
+        content: '\2193';
+      }
+    }
+  }
+}
+
+.comment-respond {
+  margin-bottom: calc(var(--spacing) * 2) !important;
+
+  p {
+    margin: 0;
+  }
+
+  form {
+    display: grid;
+  }
+
+  .comment-reply-title,
+  .logged-in-as,
+  .comment-notes,
+  .comment-form-url {
+    display: none;
+  }
+
+  .comment-form-author,
+  .comment-form-email {
+    @include mq(md, min) {
+      width: 50%;
+    }
+  }
+
+  .comment-form-comment {
+    order: 2;
+  }
+
+  .form-submit {
+    order: 3;
+
+    input {
+      width: auto;
+      margin: calc(var(--spacing) * 0.75) 0 0;
+      padding: calc(var(--spacing) * 0.75) calc(var(--spacing) * 1.5);
+      color: #fff;
+      background: hsla(var(--brand-dark), 1);
+      border: 0;
+      border-radius: 6px;
+    }
+  }
+
+  label {
+    font-size: 15px;
+    margin-bottom: 3px;
+    display: block;
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    margin: 0 0  calc(var(--spacing) * 1);
+    padding: calc(var(--spacing) / 2);
+    color: hsla(var(--clr-text), 1);
+    background: hsla(var(--bg-body), 0.5);
+    border: 1px solid hsla(var(--clr-border), 1);
+  }
+}

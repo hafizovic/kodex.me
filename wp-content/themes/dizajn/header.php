@@ -110,6 +110,24 @@ if(!is_single() && !is_page()) {
 	</div>
 </header>
 
+<div class="subheader">
+    <div class="slider-featags swiffy-slider slider-item-reveal slider-item-nogap slider-item-snapstart slider-item-nosnap-touch slider-nav-scrollbar slider-nav-visible slider-nav-touch slider-nav-autoplay slider-nav-autopause slider-indicators-square">
+        <ul class="slider-container">
+            <li><a href="https://etto.ba/oznake/20195">Genocid u Srebrenici</a></li>
+            <li><a href="https://etto.ba/oznake/930603">sukob u Izraelu</a></li>
+            <li><a href="https://etto.ba/oznake/11890">Rat u Ukrajini</a></li>
+            <li><a href="https://etto.ba/oznake/10663">Vlada FBiH</a></li>
+            <li><a href="https://etto.ba/oznake/22623">Trojka</a></li>
+            <li><a href="https://etto.ba/oznake/19454">Bakir Izetbegović</a></li>
+            <li><a href="https://etto.ba/oznake/1453">sda</a></li>
+            <li><a href="https://etto.ba/oznake/11735">NIP</a></li>
+            <li><a href="https://etto.ba/oznake/50047">Izrael</a></li>
+            <li><a href="https://etto.ba/oznake/358482">Gaza</a></li>
+            <li><a href="https://etto.ba/oznake/21668">Palestina</a></li>
+        </ul>
+    </div>
+</div>
+
 <ul class="header-controls">
     <li data-trigger="inc">+</li>
     <li data-trigger="reset">A</li>

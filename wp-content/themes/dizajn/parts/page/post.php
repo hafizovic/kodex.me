@@ -34,7 +34,14 @@
 					</div>
 				</div>
 
+                <div class="text-center">
+                    <?php
+                    dizajn_sharer();
+                    ?>
+                </div>
+
 				<div class="article-content">
+
 					<?php
 					the_content();
 					wp_link_pages([
@@ -58,7 +65,10 @@
 			</article>
 
 		<?php
-		comments_template();
+        //get_template_part( 'parts/shared/comments' );
+        if ( comments_open() || get_comments_number() ) :
+            comments_template();
+        endif;
 		endwhile;
 		get_template_part( 'parts/shared/random' );
 		?>

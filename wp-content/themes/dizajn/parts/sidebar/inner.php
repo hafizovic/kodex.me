@@ -51,6 +51,7 @@ $load  = $args['load'] ?? 5;
                         ?>
 
                     </ul>
+                    <a class="tabs-archive" href="<?php echo esc_url( home_url( '/najnovije' ) ) ?>"><?php esc_attr_e( 'Više vijesti', 'kodex' ) ?></a>
                 </div>
 
                 <div data-tab="tab-2" style="display: none">
@@ -68,6 +69,7 @@ $load  = $args['load'] ?? 5;
                         ?>
 
                     </ul>
+                    <a class="tabs-archive" href="<?php echo esc_url( home_url( '/popularno' ) ) ?>"><?php esc_attr_e( 'Više vijesti', 'kodex' ) ?></a>
                 </div>
             </div>
 

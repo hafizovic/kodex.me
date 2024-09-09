@@ -11,7 +11,7 @@
     }
 }
 
-#menu-comments {display: none; !important;}
+/*#menu-comments {display: none; !important;}*/
 #menu-plugins {display: none; !important;}
 #menu-tools {display: none; !important;}
 #menu-appearance li:nth-child(2),

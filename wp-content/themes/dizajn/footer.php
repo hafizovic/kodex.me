@@ -80,46 +80,46 @@
 
 <?php wp_footer() ?>
 <script src="<?php echo get_template_directory_uri() ?>/assets/dist/js/tachyon.min.js?v=2.0.1" type="module" crossorigin defer></script>
-<script>
-	const postDates = document.querySelectorAll('time');
-	postDates.forEach(function(datum) {
-		let w3cT = datum.getAttribute('datetime'),
-			orig = new Date(w3cT),
-			curr = new Date(),
-			diff = +Math.abs(curr - orig),
-			mins = +Math.floor(diff / 60000);
-		// calc = getDuration(diff);
-		if(mins < 2881) {
-			let d = +Math.floor(mins / 1440),
-				s = +Math.floor(mins / 60),
-				m = +Math.floor(mins % 60),
-				daysAgo = d,
-				daysUnit = d === 1 ? ' dan' : ' dana',
-				hoursAgo = s % 24,
-				hoursUnits = hoursAgo === 1 || hoursAgo === 21 ? ' sat' : (( hoursAgo === 2 || hoursAgo === 3 || hoursAgo === 4 || hoursAgo === 22 || hoursAgo === 23 ) ? ' sata' : ' sati'),
-				minsAgo = m < 10 ? '0' + m : m,
-				minsUnit = minsAgo === 1 ? ' minut' : ' min';
-
-			if(d !== 0) {
-				if(d > 3 || s === 0) {
-					datum.innerHTML = 'Prije ' + daysAgo + daysUnit;
-				} else {
-					datum.innerHTML = 'Prije ' + daysAgo + daysUnit + ' ' + hoursAgo + hoursUnits;
-				}
-			} else {
-				if(s !== 0) {
-					if(m === 0) {
-						datum.innerHTML = 'Prije ' + s + ' ' + hoursUnits;
-					} else {
-						datum.innerHTML = 'Prije ' + s + ':' + minsAgo + ' sati';
-					}
-				} else {
-					datum.innerHTML = 'Prije ' + m + minsUnit;
-				}
-			}
-		}
-	})
-</script>
+<!--<script>-->
+<!--	const postDates = document.querySelectorAll('time');-->
+<!--	postDates.forEach(function(datum) {-->
+<!--		let w3cT = datum.getAttribute('datetime'),-->
+<!--			orig = new Date(w3cT),-->
+<!--			curr = new Date(),-->
+<!--			diff = +Math.abs(curr - orig),-->
+<!--			mins = +Math.floor(diff / 60000);-->
+<!--		// calc = getDuration(diff);-->
+<!--		if(mins < 2881) {-->
+<!--			let d = +Math.floor(mins / 1440),-->
+<!--				s = +Math.floor(mins / 60),-->
+<!--				m = +Math.floor(mins % 60),-->
+<!--				daysAgo = d,-->
+<!--				daysUnit = d === 1 ? ' dan' : ' dana',-->
+<!--				hoursAgo = s % 24,-->
+<!--				hoursUnits = hoursAgo === 1 || hoursAgo === 21 ? ' sat' : (( hoursAgo === 2 || hoursAgo === 3 || hoursAgo === 4 || hoursAgo === 22 || hoursAgo === 23 ) ? ' sata' : ' sati'),-->
+<!--				minsAgo = m < 10 ? '0' + m : m,-->
+<!--				minsUnit = minsAgo === 1 ? ' minut' : ' min';-->
+<!---->
+<!--			if(d !== 0) {-->
+<!--				if(d > 3 || s === 0) {-->
+<!--					datum.innerHTML = 'Prije ' + daysAgo + daysUnit;-->
+<!--				} else {-->
+<!--					datum.innerHTML = 'Prije ' + daysAgo + daysUnit + ' ' + hoursAgo + hoursUnits;-->
+<!--				}-->
+<!--			} else {-->
+<!--				if(s !== 0) {-->
+<!--					if(m === 0) {-->
+<!--						datum.innerHTML = 'Prije ' + s + ' ' + hoursUnits;-->
+<!--					} else {-->
+<!--						datum.innerHTML = 'Prije ' + s + ':' + minsAgo + ' sati';-->
+<!--					}-->
+<!--				} else {-->
+<!--					datum.innerHTML = 'Prije ' + m + minsUnit;-->
+<!--				}-->
+<!--			}-->
+<!--		}-->
+<!--	})-->
+<!--</script>-->
 
 </body>
 </html>

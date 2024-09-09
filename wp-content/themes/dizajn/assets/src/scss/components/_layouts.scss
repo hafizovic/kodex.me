@@ -70,7 +70,7 @@
   &[data-layout="sidebar"] {
     .teaser {
       padding: calc(var(--spacing) / 2);
-      grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+      grid-template-columns: minmax(0, 30%) minmax(0, 70%);
 
       &:not(:last-child) {
         border-bottom: 1px solid hsla(var(--clr-border), 1);
@@ -120,14 +120,29 @@
       }
 
       &:first-child {
+        @include mq(md, max) {
+          gap: 0;
+          padding: 0;
+        }
+
         .teaser-thumb {
-          aspect-ratio: 4/3;
+          aspect-ratio: 2/1;
+
+          @include mq(md, min) {
+            aspect-ratio: 4/3;
+          }
+        }
+
+        .teaser-content {
+          @include mq(md, max) {
+            padding: var(--spacing);
+          }
         }
       }
 
       &:not(:first-child) {
         @include mq(md, max) {
-          grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+          grid-template-columns: minmax(0, 30%) minmax(0, 70%);
         }
 
         .teaser-thumb {
@@ -171,7 +186,7 @@
 
       &:not(:first-child) {
         @include mq(md, max) {
-          grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+          grid-template-columns: minmax(0, 30%) minmax(0, 70%);
         }
 
         .teaser-thumb {
@@ -191,6 +206,10 @@
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
 
+      @include mq(md, max) {
+        padding-top: 0;
+      }
+
       &:last-child {
         padding-right: var(--spacing);
         width: calc(100% + var(--spacing));
@@ -199,6 +218,43 @@
 
     .teaser-thumb {
       aspect-ratio: 4/3;
+    }
+  }
+
+  &[data-layout="popular"] {
+    @include mq(md, min) {
+      padding: 0 var(--spacing);
+    }
+
+    .teaser {
+      padding: var(--spacing);
+      gap: var(--spacing);
+      border-bottom: 1px solid hsla(var(--clr-border), 1);
+
+      @include mq(md, min) {
+        padding: var(--spacing) 0;
+        grid-template-columns: 180px 1fr;
+      }
+
+      &:first-child {
+        border-top: 1px solid hsla(var(--clr-border), 1);
+      }
+
+      @include mq(md, min) {
+        h3 {
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .teaser-thumb {
+      @include mq(md, min) {
+        aspect-ratio: 4/3;
+      }
+    }
+
+    .teaser-excerpt {
+      display: none;
     }
   }
 }

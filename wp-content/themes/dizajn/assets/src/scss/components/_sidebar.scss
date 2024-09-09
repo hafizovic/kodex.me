@@ -75,3 +75,21 @@
 .tabs-content {
 
 }
+
+.tabs-archive {
+  font-weight: 700;
+  text-align: center;
+  margin: var(--spacing);
+  padding: 8px var(--spacing);
+  display: block;
+  color: hsla(var(--clr-text), 1);
+  background: hsla(var(--bg-body), 1);
+  border: 1px solid hsla(var(--clr-border), 1);
+  border-radius: 4px;
+
+  &:hover {
+    text-decoration: none;
+    color: hsla(var(--clr-text), 0.5);
+    background: hsla(var(--bg-body), 0.5);
+  }
+}

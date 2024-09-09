@@ -173,6 +173,30 @@ body.admin-bar {
   }
 }
 
+.subheader {
+  color: #fff;
+  text-align: center;
+  background: hsla(var(--bg-subheader), 1);
+  overflow-y: hidden;
+  z-index: 2;
+
+  li {
+    font-size: 0.8125em;
+    text-transform: uppercase;
+    padding: 0.375em 0.5em;
+  }
+
+  a {
+    color: hsla(var(--clr-text), 0.65);
+
+    &:before {
+      padding-right: 0.125em;
+      opacity: 0.5;
+      content: '#';
+    }
+  }
+}
+
 .header-controls {
   position: fixed;
   bottom: 0;

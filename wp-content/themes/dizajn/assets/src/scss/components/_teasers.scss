@@ -8,7 +8,7 @@
   position: relative;
   gap: var(--spacing);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  grid-template-columns: minmax(0, 30%) minmax(0, 70%);
 
   @include mq(md, min) {
     gap: calc(var(--spacing) / 2);
@@ -70,15 +70,19 @@
 }
 
 .teaser-excerpt {
-  position: absolute;
-  top: calc(100% + 0.5em);
+  //position: absolute;
+  //top: calc(100% + 0.5em);
   font-size: 0.9375em;
   line-height: 1.35;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   opacity: 0.5;
   overflow: hidden;
+
+  @include mq(md, max) {
+    display: none;
+  }
 }
 
 .teaser-thumb {

@@ -137,12 +137,12 @@ if ( ! function_exists( 'dizajn_sharer' ) ) :
 
             $sharer = '<div class="sharer">
                     
-                    <a class="d-block facebook"  href="' . $facebookURL . '" target="_blank"><svg class="d-block" width="24" height="24"><use xlink:href="#i-facebook-share"></use></svg></a>
-                    <a class="d-block viber"     href="' . $viberUrl . '" target="_blank"><svg class="d-block" width="24" height="24"><use xlink:href="#i-viber-share"></use></svg></a>
-                    <a class="d-block messenger" href="' . $messengerUrl . '" target="_blank"><svg class="d-block" width="24" height="24"><use xlink:href="#i-messenger-share"></use></svg></a>
-                    <a class="d-block whatsapp"  href="' . $whatsappURL . '" target="_blank"><svg class="d-block" width="24" height="24"><use xlink:href="#i-whatsapp-share"></use></svg></a>
-                    <a class="d-block twitter"   href="' . $twitterURL . '" target="_blank"><svg class="d-block" width="24" height="24"><use xlink:href="#i-twitter-share"></use></svg></a>
-                    <a class="d-block linkedin"  href="' . $linkedInURL . '" target="_blank"><svg class="d-block" width="24" height="24"><use xlink:href="#i-linkedin-share"></use></svg></a>
+                    <a class="d-block facebook"  href="' . $facebookURL . '" target="_blank"><svg class="d-block" width="20" height="20"><use xlink:href="#i-facebook-share"></use></svg></a>
+                    <a class="d-block viber"     href="' . $viberUrl . '" target="_blank"><svg class="d-block" width="20" height="20"><use xlink:href="#i-viber-share"></use></svg></a>
+                    <a class="d-block messenger" href="' . $messengerUrl . '" target="_blank"><svg class="d-block" width="20" height="20"><use xlink:href="#i-messenger-share"></use></svg></a>
+                    <a class="d-block whatsapp"  href="' . $whatsappURL . '" target="_blank"><svg class="d-block" width="20" height="20"><use xlink:href="#i-whatsapp-share"></use></svg></a>
+                    <a class="d-block twitter"   href="' . $twitterURL . '" target="_blank"><svg class="d-block" width="20" height="20"><use xlink:href="#i-twitter-share"></use></svg></a>
+                    <a class="d-block linkedin"  href="' . $linkedInURL . '" target="_blank"><svg class="d-block" width="20" height="20"><use xlink:href="#i-linkedin-share"></use></svg></a>
                   </div>';
 
             echo $sharer;
