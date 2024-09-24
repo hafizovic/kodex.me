@@ -58,14 +58,14 @@ body {
 
   [data-scheme="dark"],
   &[data-scheme="dark"] {
-    --clr-text: 0, 0%, 78%;
-    --clr-border: 0, 0%, 25%;
-    --bg-body: 0, 0%, 30%;
-    --bg-content: 0, 0%, 17%;
-    --bg-subheader: 30, 15%, 35%;
+    --clr-text: 0, 0%, 100%;
+    --clr-border: 208, 50%, 20%;
+    --bg-body: 208, 25%, 13%;
+    --bg-content: 208, 55%, 13%;
+    --bg-subheader: 208, 225%, 23%;
 
     [data-scheme="dark"] {
-      --bg-content: 0, 0%, 0%;
+      --bg-content: 209, 62%, 20%;
     }
 
     .section-header .section-header-cat {

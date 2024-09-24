@@ -12,11 +12,11 @@
 }
 
 /*#menu-comments {display: none; !important;}*/
-#menu-plugins {display: none; !important;}
-#menu-tools {display: none; !important;}
-#menu-appearance li:nth-child(2),
-#menu-appearance li:nth-child(3),
-#menu-appearance li:nth-child(6) {display: none;}
+/*#menu-plugins {display: none; !important;}*/
+/*#menu-tools {display: none; !important;}*/
+/*#menu-appearance ul li:nth-child(2),*/
+/*#menu-appearance ul li:nth-child(3),*/
+/*#menu-appearance ul li:nth-child(6) {display: none; !important;}*/
 
 /* Hide Footer */
 #wpfooter {display: none;}

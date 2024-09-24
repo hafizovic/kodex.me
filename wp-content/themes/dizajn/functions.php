@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( '_S_VERSION' ) ) {
-    define( '_S_VERSION', '1.0.3' );
+    define( '_S_VERSION', '2.2.2' );
 }
 
 function design_setup() {
@@ -36,12 +36,12 @@ function design_setup() {
     remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
 
     // Remove Global inline style
-    function remove_global_styles(){
-        wp_dequeue_style( 'global-styles' );
-        wp_dequeue_style('dashicons');
-        wp_deregister_style('dashicons');
-    }
-    add_action( 'wp_enqueue_scripts', 'remove_global_styles' );
+//    function remove_global_styles(){
+//        wp_dequeue_style( 'global-styles' );
+//        wp_dequeue_style('dashicons');
+//        wp_deregister_style('dashicons');
+//    }
+//    add_action( 'wp_enqueue_scripts', 'remove_global_styles' );
 
     // Remove Classic Themes CSS
     remove_action( 'wp_enqueue_scripts', 'wp_enqueue_classic_theme_styles' );
