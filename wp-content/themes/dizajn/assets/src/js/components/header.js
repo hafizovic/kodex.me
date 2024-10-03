@@ -51,7 +51,7 @@ function themeLogicOnLoad() {
   let currentScheme = localStorage.getItem('scheme');
   let currentHours = (new Date()).getHours();
   let itsDay = currentHours >= 7 && currentHours < 20;
-  let newScheme = !currentScheme ? itsDay ? 'light' : 'dark' : currentScheme;
+  let newScheme = !currentScheme ? 'dark' : currentScheme;
 
   localStorage.setItem('scheme', newScheme);
   document.body.setAttribute('data-scheme', newScheme);
