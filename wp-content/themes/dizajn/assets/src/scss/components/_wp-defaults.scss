@@ -1,5 +1,5 @@
 .nav-links {
-  margin: var(--spacing) 0 calc(var(--spacing) * 1);
+  margin: var(--spacing) var(--spacing) calc(var(--spacing) * -1);
   padding: var(--spacing);
   gap: 0.25em;
   display: flex;
@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   background: hsla(var(--brand), 0.05);
-  border-top: 1px solid hsla(var(--clr-border), 1);
+  border: 1px solid hsla(var(--clr-border), 1);
   border-radius: 0.25em;
 
   a {

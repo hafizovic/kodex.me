@@ -62,17 +62,19 @@
 		</div>
 
 		<ul class="socials footer-socials">
-			<li><a class="fb" href="<?php echo esc_url( __( 'https://www.facebook.com/profile.php?id=61556630280710', 'dizajn' ) ); ?>" target="_blank" title="Facebook"><svg class="d-block" width="24" height="24"><use xlink:href="#i-facebook" /></svg></a></li>
-			<li><a class="tw" href="<?php echo esc_url( __( 'https://twitter.com/', 'dizajn' ) ); ?>" target="_blank" title="Twitter"><svg class="d-block" width="24" height="24"><use xlink:href="#i-twitter" /></svg></a></li>
-			<li><a class="yt" href="<?php echo esc_url( __( 'https://youtube.com/', 'dizajn' ) ); ?>" target="_blank" title="YouTube"><svg class="d-block" width="24" height="24"><use xlink:href="#i-youtube" /></svg></a></li>
-			<li><a class="in" href="<?php echo esc_url( __( 'https://instagram.com/', 'dizajn' ) ); ?>" target="_blank" title="Instagram"><svg class="d-block" width="24" height="24"><use xlink:href="#i-instagram" /></svg></a></li>
+			<li><a class="fb" href="<?php echo esc_url( __( 'https://facebook.com/profile.php?id=61556630280710', 'dizajn' ) ); ?>" target="_blank" title="Facebook"><svg class="d-block" width="24" height="24"><use xlink:href="#i-facebook" /></svg></a></li>
+			<li><a class="tw" href="<?php echo esc_url( __( 'https://x.com/kodexme', 'dizajn' ) ); ?>" target="_blank" title="Twitter"><svg class="d-block" width="24" height="24"><use xlink:href="#i-twitter" /></svg></a></li>
+			<li><a class="yt" href="<?php echo esc_url( __( 'https://youtube.com/kodexme', 'dizajn' ) ); ?>" target="_blank" title="YouTube"><svg class="d-block" width="24" height="24"><use xlink:href="#i-youtube" /></svg></a></li>
+			<li><a class="in" href="<?php echo esc_url( __( 'https://instagram.com/kodex.me', 'dizajn' ) ); ?>" target="_blank" title="Instagram"><svg class="d-block" width="24" height="24"><use xlink:href="#i-instagram" /></svg></a></li>
 		</ul>
 
 	</div>
 
 	<div class="footer-copy">
 		<div class="wrap px">
-			<?php printf( esc_html__( '&copy; %s | Sva prava zadržana', 'dizajn' ), date('Y') ); ?>
+            <p class="m-0">Vlasnik autorskih prava Kodex.me.</p>
+            <p class="m-0">Kopiranje i prenos sadržaja samo uz pismenu dozvolu</p>
+            <p class="m-0"><?php printf( esc_html__( '&copy; %s | Sva prava zadržana', 'dizajn' ), date('Y') ); ?></p>
 		</div>
 	</div>
 

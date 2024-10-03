@@ -16,7 +16,7 @@ new \Kirki\Section(
     'home_cats',
     [
         'panel'       => 'home',
-        'priority'    => 20,
+        'priority'    => 30,
         'title'       => esc_html__( 'Kategorije', 'dizajn' ),
         'description' => esc_html__( 'Izmjeni vidljivost i redoslijed kategorija ispod primarnih vijesti.', 'dizajn' ),
     ]

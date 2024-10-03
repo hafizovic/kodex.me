@@ -4,6 +4,18 @@
     grid-template-columns: 1fr;
   }
 
+  &[data-layout="intro"],
+  &[data-layout="sidebar"],
+  &[data-layout="category"] {
+    li.teaser {
+      &:hover {
+        @include mq(md, max) {
+          box-shadow: 0 0 10px rgba(#000, 0.25);
+        }
+      }
+    }
+  }
+
   &[data-layout="intro"] {
     @include mq(md, min) {
       gap: var(--spacing);

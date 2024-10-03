@@ -1,4 +1,5 @@
 .footer {
+  --twitter: #fff;
   margin-top: var(--spacing);
   background: hsla(var(--bg-content), 1);
 
@@ -30,15 +31,27 @@
   text-align: center;
   color: hsla(var(--clr-text), 1);
   background: #000;
-  padding: calc(var(--spacing) / 2) 0;
+  padding: var(--spacing) 0;
   gap: 0.5em;
   display: flex;
   flex-flow: column nowrap;
+
+  @include mq(lg, min) {
+    padding: calc(var(--spacing) / 1) 0;
+  }
 
   & > .wrap {
     font-size: 0.9375em;
     line-height: 1em;
     opacity: 0.5;
+    gap: 0.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+
+    @include mq(lg, min) {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
   }
 }
 

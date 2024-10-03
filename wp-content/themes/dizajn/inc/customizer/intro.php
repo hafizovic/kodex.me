@@ -18,20 +18,11 @@ foreach ( $latestPostsQuery as $post ) {
     $latestPosts[$post->ID] = $post->post_title;
 }
 
-new \Kirki\Panel(
-    'home',
-    [
-        'priority'    => 10,
-        'title'       => esc_html__( 'Početna', 'dizajn' ),
-        'description' => esc_html__( 'Izmjenu početnu', 'dizajn' ),
-    ]
-);
-
 new \Kirki\Section(
     'home_intro',
     [
         'panel'       => 'home',
-        'priority'    => 10,
+        'priority'    => 20,
         'title'       => esc_html__( 'Intro', 'dizajn' ),
         'description' => esc_html__( 'Izmjeni primarne članke, koje posjetilac vidi čim otvori sajt.', 'dizajn' ),
     ]

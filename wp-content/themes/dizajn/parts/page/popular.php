@@ -59,11 +59,6 @@
                 wp_reset_postdata();
                 ?>
 
-                <div class="popular-triggers">
-                    <a href="<?php echo esc_url( home_url( '/najnovije' ) ) ?>"><?php esc_attr_e( 'Najnovije', 'kodex' ) ?></a>
-                    <div class="is-active"><?php esc_attr_e( 'Popularno', 'kodex' ) ?></div>
-                </div>
-
             </div>
 
         </div>
