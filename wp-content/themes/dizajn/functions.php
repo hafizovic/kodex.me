@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( '_S_VERSION' ) ) {
-    define( '_S_VERSION', '2.2.2' );
+    define( '_S_VERSION', '2.2.3' );
 }
 
 function design_setup() {
